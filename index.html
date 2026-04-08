@@ -3,638 +3,486 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neurulus - GenAI Software Solutions | AIoT Platforms | AI Deployment</title>
-  <meta name="description" content="Neurulus delivers GenAI software platforms, AIoT solutions, and enterprise-grade AI deployment services for training, fine-tuning, and production inference.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            lavender: {
-              50: '#f5f3ff',
-              100: '#ede9fe',
-              200: '#ddd6fe',
-              300: '#c4b5fd',
-              400: '#a78bfa',
-              500: '#8b5cf6',
-              600: '#7c3aed',
-            },
-            surface: {
-              dark: '#1a1a2e',
-              darker: '#0f0f1a',
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Space Grotesk', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    .gradient-glow {
-      background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
-    }
-    .card-glow {
-      box-shadow: 0 0 80px rgba(139, 92, 246, 0.15), 0 0 120px rgba(139, 92, 246, 0.1);
-    }
-    .text-gradient {
-      background: linear-gradient(135deg, #8b5cf6 0%, #c4b5fd 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .line-connector {
-      background: linear-gradient(90deg, transparent 0%, #8b5cf6 50%, transparent 100%);
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    .animate-pulse {
-      animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    .delay-1000 {
-      animation-delay: 1s;
-    }
-    .delay-2000 {
-      animation-delay: 2s;
-    }
-  </style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="neurulus — Sovereign Intelligence Infrastructure">
+  <meta property="og:description" content="From drones to datacenters. One platform, sovereign by design. Collective intelligence across heterogeneous hardware.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neurulus.dev">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="neurulus — Sovereign Intelligence Infrastructure">
+  <meta name="twitter:description" content="From drones to datacenters. One platform, sovereign by design.">
+  <title>neurulus — Sovereign Intelligence Infrastructure</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>:root{--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;}</style>
 </head>
-<body class="bg-lavender-100 font-sans antialiased">
+<body>
 
-  <!-- Navbar will be inserted by navbar.js -->
-
-  <!-- Hero Section -->
-  <section class="relative min-h-screen pt-24 px-6 overflow-hidden">
-  <!-- Decorative Curved Lines -->
-  <svg class="absolute top-20 right-0 w-[600px] h-[600px] opacity-30 pointer-events-none" viewBox="0 0 600 600" fill="none">
-    <circle cx="300" cy="300" r="280" stroke="#1a1a2e" stroke-width="1" fill="none" opacity="0.3"/>
-    <circle cx="300" cy="300" r="200" stroke="#1a1a2e" stroke-width="1" fill="none" opacity="0.2"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto pt-12">
-    <!-- Main Hero Card -->
-    <div class="relative bg-surface-dark rounded-[2.5rem] overflow-hidden card-glow">
-      <!-- Gradient Glow -->
-      <div class="absolute inset-0 gradient-glow"></div>
-
-      <div class="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-16 min-h-[500px]">
-        <!-- Left Content -->
-        <div class="flex flex-col justify-center">
-          <span class="text-lavender-400 text-2xl font-display mb-4">}</span>
-          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-            <span class="text-lavender-300">INTELLIGENCE,</span><br>
-            ARCHITECTED.<br>
-          </h1>
-          <p class="text-white/70 text-base lg:text-lg max-w-md leading-relaxed">
-            Unlocking the world’s <span class="text-lavender-300 font-semibold">$200B data opportunity</span> with AI BSPs and platform tools.  
-            We build <span class="text-lavender-300 font-semibold">GenAI software</span>, <span class="text-lavender-300 font-semibold">AIoT algorithms</span>, and <span class="text-lavender-300 font-semibold">enterprise AI stacks</span> that deliver secure, on-device and on-prem intelligence at scale.  
-            Neurulus accelerates model development, deployment, and lifecycle operations without changing your existing architecture.
-          </p>
-        </div>
-
-        <!-- Right Content -->
-        <div class="flex flex-col justify-center items-start lg:items-end lg:text-right">
-          <div class="flex items-start gap-3 mb-8">
-            <span class="text-lavender-400 text-xl font-display">}</span>
-            <p class="text-white/70 text-base lg:text-lg max-w-sm leading-relaxed">
-              Design, launch, and operate <span class="text-lavender-300 font-semibold">GenAI applications</span> with secure data pipelines,  
-              <span class="text-lavender-300 font-semibold">RAG-ready vector layers</span>, and <span class="text-lavender-300 font-semibold">multi-modal inference</span> across cloud, on-prem, and edge.  
-              This is the era of <span class="text-lavender-300 font-semibold">sovereign AI software</span>.
-            </p>
-          </div>
-          <a href="index.html#products" class="inline-flex items-center gap-3 bg-surface-darker/80 backdrop-blur text-white px-8 py-4 rounded-full text-sm font-medium tracking-widest uppercase hover:bg-surface-darker transition-all border border-white/10">
-            Explore Neurulus Platforms
-          </a>
-        </div>
-      </div>
-
-      <!-- Key Metrics -->
-      <div class="relative px-8 lg:px-16 pb-8 lg:pb-12">
-        <div class="absolute left-1/2 -translate-x-1/2 top-0 w-px h-8 bg-gradient-to-b from-lavender-500/50 to-transparent"></div>
-
-        <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
-
-          <!-- Metric 1 -->
-          <div class="bg-surface-darker/90 backdrop-blur rounded-2xl px-8 py-6 min-w-[200px]">
-            <div class="font-display text-4xl lg:text-5xl text-white mb-1">10<span class="text-lavender-400">x</span></div>
-            <p class="text-white/50 text-sm">Faster AI Delivery</p>
-          </div>
-
-          <!-- Metric 2 -->
-          <div class="bg-surface-darker/90 backdrop-blur rounded-2xl px-8 py-6 min-w-[200px]">
-            <div class="font-display text-4xl lg:text-5xl text-white mb-1">60<span class="text-lavender-400">%</span></div>
-            <p class="text-white/50 text-sm">Lower Ops Overhead</p>
-          </div>
-
-          <!-- Metric 3 -->
-          <div class="bg-surface-darker/90 backdrop-blur rounded-2xl px-8 py-6 min-w-[200px]">
-            <div class="font-display text-4xl lg:text-5xl text-white mb-1">24<span class="text-lavender-400">/</span>7</div>
-            <p class="text-white/50 text-sm">Model Monitoring</p>
-          </div>
-
-          <!-- Metric 4 -->
-          <div class="bg-surface-darker/90 backdrop-blur rounded-2xl px-8 py-6 min-w-[200px]">
-            <div class="font-display text-4xl lg:text-5xl text-white mb-1">100<span class="text-lavender-400">%</span></div>
-            <p class="text-white/50 text-sm">Policy Control</p>
-          </div>
-        </div>
-      </div>
+  <nav class="nav">
+    <div class="wrap">
+      <a href="/" class="nav__logo">neurulus</a>
+      <ul class="nav__links">
+        <li><a href="product.html">Product</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="company.html">Company</a></li>
+      </ul>
+      <a href="mailto:sales@neurulus.com" class="nav__right">Contact</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- AI Factory Narrative -->
-<section class="py-24 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-      <span class="text-lavender-500 font-display text-lg tracking-widest uppercase mb-4 block">GenAI Software</span>
-
-    <h2 class="font-display text-4xl md:text-5xl text-surface-dark mb-6">
-      The Intelligence Stack Starts Here.
-    </h2>
-
-    <p class="text-surface-dark/70 text-lg leading-relaxed max-w-3xl mx-auto">
-      Neurulus delivers <span class="text-lavender-600 font-semibold">software-first GenAI platforms</span> built for regulated, data-sensitive environments.  
-      We unify data ingestion, model training, RAG pipelines, evaluation, and monitoring so teams can launch production-grade AI faster — without changing their existing infrastructure.  
-      Build sovereign AI stacks with <span class="text-lavender-600 font-semibold">policy enforcement</span>, <span class="text-lavender-600 font-semibold">secure orchestration</span>, and <span class="text-lavender-600 font-semibold">full lifecycle governance</span>.
-    </p>
-  </div>
-</section>
-
-<!-- Product Trifecta (4 Cards) -->
-<section id="platforms" class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="text-lavender-500 font-display text-lg tracking-widest uppercase mb-4 block">Platform Ecosystem</span>
-      <h2 class="font-display text-4xl md:text-5xl text-surface-dark mb-4">The Neurulus Software Stack</h2>
-      <p class="text-surface-dark/60 text-lg max-w-2xl mx-auto">
-        Four purpose-built platforms engineered for <span class="text-lavender-600 font-semibold">model development</span>, <span class="text-lavender-600 font-semibold">RAG pipelines</span>, <span class="text-lavender-600 font-semibold">AI operations</span>, and <span class="text-lavender-600 font-semibold">secure deployment</span> at enterprise scale.
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__text">
+      <div class="hero__eyebrow">Sovereign Intelligence Platform</div>
+      <h1 class="hero__title">We turn scattered signals<br>into clear intelligence.</h1>
+      <p class="hero__desc">
+        Real-time visibility to act with precision. From a single
+        sensor to a full inference cluster. Predictable execution.
+        No guesswork, no delays.
       </p>
+      <div class="hero__actions">
+        <a href="product.html" class="btn btn--filled">Explore product</a>
+        <a href="solutions.html" class="btn">View solutions</a>
+      </div>
     </div>
-
-    <!-- 4-column grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- NEURAL -->
-      <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-lavender-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div class="relative">
-          
-          <div class="w-14 h-14 rounded-2xl bg-lavender-100 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-            </svg>
-          </div>
-          <span class="text-lavender-500 text-xs font-semibold tracking-widest uppercase">ModelOps</span>
-          <h3 class="font-display text-2xl text-surface-dark mt-2 mb-3">Neurulus Neural Studio</h3>
-          <p class="text-surface-dark/60 text-sm leading-relaxed mb-6">
-            Unified model development, training orchestration, and evaluation for <span class="text-lavender-600 font-semibold">Foundation Models</span> and <span class="text-lavender-600 font-semibold">LLM workloads</span>. Built-in experiment tracking, governance, and cost controls for production-grade AI.
-          </p>
-          <a href="neural-3000.html" class="inline-flex items-center gap-2 text-lavender-600 font-medium text-sm group-hover:gap-3 transition-all mt-4">
-            Learn More
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- KINETIC -->
-      <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-lavender-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div class="relative">
-          
-          <div class="w-14 h-14 rounded-2xl bg-lavender-100 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <span class="text-lavender-500 text-xs font-semibold tracking-widest uppercase">App Studio</span>
-          <h3 class="font-display text-2xl text-surface-dark mt-2 mb-3">Neurulus Kinetic Labs</h3>
-          <p class="text-surface-dark/60 text-sm leading-relaxed mb-6">
-            Rapid GenAI application development with agent workflows, secure connectors, and UI accelerators. Perfect for <span class="text-lavender-600 font-semibold">prototyping</span>, <span class="text-lavender-600 font-semibold">productization</span>, and <span class="text-lavender-600 font-semibold">enterprise deployment</span>.
-          </p>
-          <a href="kinetic-pro.html" class="inline-flex items-center gap-2 text-lavender-600 font-medium text-sm group-hover:gap-3 transition-all mt-4">
-            Learn More
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- CORE -->
-      <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-lavender-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div class="relative">
-          
-          <div class="w-14 h-14 rounded-2xl bg-lavender-100 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-            </svg>
-          </div>
-          <span class="text-lavender-500 text-xs font-semibold tracking-widest uppercase">Governance</span>
-          <h3 class="font-display text-2xl text-surface-dark mt-2 mb-3">Neurulus Core Platform</h3>
-          <p class="text-surface-dark/60 text-sm leading-relaxed mb-6">
-            Enterprise AI governance, risk controls, and compliance tooling for regulated environments. Enable <span class="text-lavender-600 font-semibold">policy enforcement</span>, <span class="text-lavender-600 font-semibold">audit trails</span>, and <span class="text-lavender-600 font-semibold">secure model rollouts</span>.
-          </p>
-          <a href="core.html" class="inline-flex items-center gap-2 text-lavender-600 font-medium text-sm group-hover:gap-3 transition-all mt-4">
-            Learn More
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- QUANTUM -->
-      <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-lavender-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div class="relative">
-          
-          <div class="w-14 h-14 rounded-2xl bg-lavender-100 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
-            </svg>
-          </div>
-          <span class="text-lavender-500 text-xs font-semibold tracking-widest uppercase">Data Fabric</span>
-          <h3 class="font-display text-2xl text-surface-dark mt-2 mb-3">Neurulus Quantum Fabric</h3>
-          <p class="text-surface-dark/60 text-sm leading-relaxed mb-6">
-            Streaming data, vector search, and retrieval orchestration optimized for <span class="text-lavender-600 font-semibold">RAG pipelines</span> and <span class="text-lavender-600 font-semibold">multi-modal inference</span>. Connects enterprise data with AI apps securely.
-          </p>
-          <a href="quantum.html" class="inline-flex items-center gap-2 text-lavender-600 font-medium text-sm group-hover:gap-3 transition-all mt-4">
-            Learn More
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
+    <div class="hero__visual scanlines">
+      <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;">
+        <g fill="#D5D3CE" opacity="0.6"><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1"/></pattern><rect width="600" height="600" fill="url(#dots)"/></g>
+        <g stroke="#C5C3BE" stroke-width="1" fill="none"><line x1="300" y1="120" x2="180" y2="220"/><line x1="300" y1="120" x2="420" y2="220"/><line x1="300" y1="120" x2="300" y2="240"/><line x1="180" y1="220" x2="120" y2="340"/><line x1="180" y1="220" x2="240" y2="360"/><line x1="420" y1="220" x2="480" y2="340"/><line x1="420" y1="220" x2="360" y2="360"/><line x1="300" y1="240" x2="240" y2="360"/><line x1="300" y1="240" x2="360" y2="360"/><line x1="120" y1="340" x2="200" y2="460"/><line x1="240" y1="360" x2="200" y2="460"/><line x1="240" y1="360" x2="300" y2="480"/><line x1="360" y1="360" x2="300" y2="480"/><line x1="360" y1="360" x2="400" y2="460"/><line x1="480" y1="340" x2="400" y2="460"/><line x1="200" y1="460" x2="300" y2="480"/><line x1="400" y1="460" x2="300" y2="480"/></g>
+        <g fill="none" stroke="#999" stroke-width="1.5"><circle cx="120" cy="340" r="18"/><circle cx="480" cy="340" r="18"/><circle cx="200" cy="460" r="16"/><circle cx="400" cy="460" r="16"/></g>
+        <g fill="none" stroke="#777" stroke-width="2"><circle cx="180" cy="220" r="22"/><circle cx="420" cy="220" r="22"/><circle cx="240" cy="360" r="20"/><circle cx="360" cy="360" r="20"/></g>
+        <circle cx="300" cy="240" r="28" fill="none" stroke="#999" stroke-width="2"/><circle cx="300" cy="240" r="12" fill="#C5C3BE" stroke="#888" stroke-width="1.5"/>
+        <circle cx="300" cy="120" r="24" fill="none" stroke="#aaa" stroke-width="2"/><circle cx="300" cy="120" r="8" fill="#999"/>
+        <circle cx="300" cy="480" r="26" fill="none" stroke="#aaa" stroke-width="2.5"/><circle cx="300" cy="480" r="10" fill="#999"/>
+        <g fill="#999"><circle cx="240" cy="170" r="2.5"/><circle cx="360" cy="170" r="2.5"/><circle cx="300" cy="180" r="2.5"/><circle cx="150" cy="280" r="2"/><circle cx="450" cy="280" r="2"/><circle cx="270" cy="300" r="2"/><circle cx="330" cy="300" r="2"/><circle cx="250" cy="470" r="2"/><circle cx="350" cy="470" r="2"/></g>
+        <g font-family="monospace" font-size="9" fill="#999" letter-spacing="0.1em"><text x="300" y="90" text-anchor="middle">OBSERVE</text><text x="300" y="530" text-anchor="middle">EXECUTE</text><text x="80" y="345" text-anchor="middle">EDGE</text><text x="520" y="345" text-anchor="middle">EDGE</text><text x="300" y="275" text-anchor="middle" font-size="8" fill="#777">REASON</text></g>
+        <!-- Outer ring label -->
+        <text x="300" y="580" text-anchor="middle" font-family="monospace" font-size="7" fill="#C5C3BE" letter-spacing="0.15em">SOVEREIGN INTELLIGENCE MESH</text>
+      </svg>
     </div>
+  </section>
+
+  <!-- RUNS ON strip -->
+  <div class="mono-banner">Drones &middot; Robots &middot; Vehicles &middot; Medical Devices &middot; Industrial PLCs &middot; Cameras &middot; Servers &middot; HPC Clusters</div>
+
+  <!-- FIELD TESTED + chip vendors -->
+  <div class="certs">
+    <span class="cert" style="border:1px solid var(--border);padding:4px 12px;">Field Tested &middot; Status — Active</span>
+    <span class="cert" style="font-size:13px;font-weight:700;color:var(--text);">ARM</span>
+    <span class="cert" style="font-size:13px;font-weight:700;color:var(--text);">Intel</span>
+    <span class="cert" style="font-size:13px;font-weight:700;color:var(--text);">AMD</span>
+    <span class="cert" style="font-size:13px;font-weight:700;color:var(--text);">NVIDIA</span>
+    <span class="cert" style="font-size:13px;font-weight:700;color:var(--text);">RISC-V</span>
   </div>
-</section>
 
+  <!-- HOW IT WORKS — 3 step -->
+  <section class="callout ghost-text" data-ghost="OBSERVE" style="padding:80px 0;">
+    <div class="wrap">
+      <span class="t-mono" style="display:block;margin-bottom:24px;">How it works</span>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:48px;">
+        <div style="background:var(--bg);padding:48px 36px;text-align:center;border-top:2px solid var(--text);">
+          <div style="font-family:var(--mono);font-size:48px;font-weight:700;line-height:1;margin-bottom:16px;color:var(--border);">01</div>
+          <h3 style="font-size:24px;font-weight:700;margin-bottom:10px;">Observe</h3>
+          <p class="t-body">Ingest data from sensors, cameras, networks, and systems. Build a real-time picture of your operations.</p>
+        </div>
+        <div style="background:var(--bg);padding:48px 36px;text-align:center;border-top:2px solid var(--text);">
+          <div style="font-family:var(--mono);font-size:48px;font-weight:700;line-height:1;margin-bottom:16px;color:var(--border);">02</div>
+          <h3 style="font-size:24px;font-weight:700;margin-bottom:10px;">Reason</h3>
+          <p class="t-body">Local inference with advanced compression. Identify patterns, surface risks, generate structured outputs.</p>
+        </div>
+        <div style="background:var(--bg);padding:48px 36px;text-align:center;border-top:2px solid var(--text);">
+          <div style="font-family:var(--mono);font-size:48px;font-weight:700;line-height:1;margin-bottom:16px;color:var(--border);">03</div>
+          <h3 style="font-size:24px;font-weight:700;margin-bottom:10px;">Execute</h3>
+          <p class="t-body">Act on insights immediately. Configure systems, alert operators, trigger workflows. Every decision compounds.</p>
+        </div>
+      </div>
+      <p style="text-align:center;" class="t-body"><strong>No guesswork, no delays.</strong> Real-time inputs. Real-world impact. Every action feeds back into the mesh — the system learns from every deployment.</p>
+    </div>
+  </section>
 
+  <!-- OVERSIZED STATS -->
+  <section style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="wrap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);">
+      <div style="background:var(--bg);padding:64px 36px;text-align:center;">
+        <div style="font-family:var(--sans);font-size:clamp(56px,8vw,96px);font-weight:800;line-height:1;letter-spacing:-0.03em;">3.5x</div>
+        <p class="t-mono" style="margin-top:16px;">Faster inference, same silicon</p>
+      </div>
+      <div style="background:var(--bg);padding:64px 36px;text-align:center;">
+        <div style="font-family:var(--sans);font-size:clamp(56px,8vw,96px);font-weight:800;line-height:1;letter-spacing:-0.03em;">6x</div>
+        <p class="t-mono" style="margin-top:16px;">KV cache compression, zero loss</p>
+      </div>
+      <div style="background:var(--bg);padding:64px 36px;text-align:center;">
+        <div style="font-family:var(--sans);font-size:clamp(56px,8vw,96px);font-weight:800;line-height:1;letter-spacing:-0.03em;">3s</div>
+        <p class="t-mono" style="margin-top:16px;">Boot to operational, from RAM</p>
+      </div>
+    </div>
+  </section>
 
+  <div class="reg-divider">NEURULUS PLATFORM</div>
+  <!-- PLATFORM SPLIT -->
+  <section class="split">
+    <div class="split__content">
+      <div class="split__label">Platform</div>
+      <h2 class="split__title">Predictive &amp; adaptive intelligence.</h2>
+      <p class="split__desc">A modular intelligence engine calibrated for real-time operation. Structured input distribution across modules. Predictable execution under industrial load.</p>
+      <p class="split__desc">Assembly-optimized inference. Advanced KV cache compression. RAM-resident operating system with zero external binary trust.</p>
+      <a href="product.html" class="btn">Explore product</a>
+      <dl class="inline-specs">
+        <dt>Classification</dt><dd>Sovereign</dd>
+        <dt>Dependency</dt><dd>Zero external</dd>
+        <dt>Attack surface</dt><dd>Minimal by design</dd>
+        <dt>Boot</dt><dd>3.1 seconds</dd>
+        <dt>Egress</dt><dd>None</dd>
+      </dl>
+    </div>
+    <div class="split__visual">
+      <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+        <ellipse cx="250" cy="400" rx="180" ry="20" fill="#D5D3CE" opacity="0.4"/>
+        <g fill="#E8E6E0" stroke="#C5C3BE" stroke-width="1"><path d="M250,360 L440,280 L250,240 L60,280 Z"/><path d="M60,280 L60,300 L250,360 L250,380 L60,300" fill="#DDDBD5"/><path d="M440,280 L440,300 L250,360 L250,380 L440,300" fill="#D5D3CE"/></g>
+        <g fill="#F0EDE8" stroke="#C5C3BE" stroke-width="1"><path d="M250,300 L430,224 L250,184 L70,224 Z"/><path d="M70,224 L70,244 L250,300 L250,320 L70,244" fill="#E8E6E0"/><path d="M430,224 L430,244 L250,300 L250,320 L430,244" fill="#DDDBD5"/></g>
+        <g fill="#F5F3EE" stroke="#B5B3AE" stroke-width="1.5"><path d="M250,240 L420,168 L250,128 L80,168 Z"/><path d="M80,168 L80,188 L250,240 L250,260 L80,188" fill="#EDEAE4"/><path d="M420,168 L420,188 L250,240 L250,260 L420,188" fill="#E0DDD8"/></g>
+        <g fill="#F5F3EE" stroke="#0A0A0A" stroke-width="2"><path d="M250,180 L390,118 L250,82 L110,118 Z"/><path d="M110,118 L110,134 L250,180 L250,196 L110,134" fill="#EDEAE4"/><path d="M390,118 L390,134 L250,180 L250,196 L390,134" fill="#DDDBD5"/></g>
+        <g fill="#0A0A0A" font-family="monospace" font-size="8" letter-spacing="0.08em"><text x="250" y="140" text-anchor="middle">APPLICATIONS</text></g>
+        <g fill="#999" font-family="monospace" font-size="7" letter-spacing="0.08em"><text x="250" y="220" text-anchor="middle">INFERENCE</text><text x="250" y="275" text-anchor="middle">SYSTEM</text><text x="250" y="340" text-anchor="middle">HARDWARE</text></g>
+        <circle cx="220" cy="115" r="3" fill="#0A0A0A"/><circle cx="250" cy="105" r="3" fill="#0A0A0A"/><circle cx="280" cy="115" r="3" fill="#0A0A0A"/>
+        <line x1="220" y1="115" x2="250" y2="105" stroke="#0A0A0A" stroke-width="1"/><line x1="280" y1="115" x2="250" y2="105" stroke="#0A0A0A" stroke-width="1"/>
+      </svg>
+    </div>
+  </section>
 
+  <div class="reg-divider">HARDWARE SYSTEMS</div>
+  <!-- PRODUCTS SPLIT REVERSE -->
+  <section class="split split--reverse">
+    <div class="split__content">
+      <div class="split__label">Hardware</div>
+      <h2 class="split__title">Precision engineered. Field ready.</h2>
+      <p class="split__desc" style="margin-bottom:12px;"><strong>Computer</strong> — companion-scale edge intelligence. Embedded in drones, robots, kiosks.</p>
+      <p class="split__desc" style="margin-bottom:12px;"><strong>Terminal</strong> — ruggedized handheld for field operations. IP67. Factory floors to flight decks.</p>
+      <p class="split__desc" style="margin-bottom:12px;"><strong>Sovereign Box</strong> — multi-GPU datacenter appliance. 128GB VRAM. Your premises, your data.</p>
+      <p class="split__desc">Every system ships with the full platform. Same capabilities at every tier. When connected, they form a mesh — sharing context, distributing workloads, compounding intelligence across the fleet.</p>
+      <a href="product.html" class="btn">View all products</a>
+    </div>
+    <div class="split__visual">
+      <!-- Deployment topology: drone → computer → terminal → sovereign box -->
+      <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;">
+        <!-- Drone (far left) -->
+        <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+          <line x1="30" y1="80" x2="60" y2="80"/><line x1="80" y1="80" x2="110" y2="80"/>
+          <circle cx="70" cy="80" r="12"/>
+          <circle cx="70" cy="80" r="4" fill="#0A0A0A"/>
+          <line x1="30" y1="76" x2="30" y2="84"/><line x1="110" y1="76" x2="110" y2="84"/>
+        </g>
+        <text x="70" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.08em">DRONE</text>
 
-<!-- SOLUTIONS SECTION -->
-<section id="solutions" class="py-24 px-6 bg-surface-dark text-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14">
-      <span class="text-lavender-300 font-display text-lg tracking-widest uppercase mb-3 block">
-        Solutions
-      </span>
-      <h2 class="font-display text-4xl md:text-5xl mb-6">
-        Hardware, Infrastructure & Edge Systems
-      </h2>
-      <p class="text-white/70 text-lg max-w-3xl mx-auto">
-        Complete portfolio of enterprise hardware, software services, and edge devices.
-        Explore each line to see full specifications and use cases.
+        <!-- Flow arrow drone → computer -->
+        <g stroke="#0A0A0A" stroke-width="1" stroke-dasharray="4,3" class="svg-flow"><line x1="70" y1="120" x2="70" y2="155"/></g>
+        <polygon points="66,152 70,162 74,152" fill="#999"/>
+
+        <!-- Computer (edge device) -->
+        <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+          <rect x="40" y="168" width="60" height="48" rx="6"/>
+          <circle cx="70" cy="182" r="6" stroke="#999" stroke-width="1"/>
+          <line x1="52" y1="198" x2="88" y2="198" stroke="#C5C3BE" stroke-width="1"/>
+          <line x1="52" y1="204" x2="78" y2="204" stroke="#C5C3BE" stroke-width="1"/>
+        </g>
+        <text x="70" y="234" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.08em">COMPUTER</text>
+        <text x="70" y="244" text-anchor="middle" font-family="monospace" font-size="6" fill="#C5C3BE">EDGE / 2W</text>
+
+        <!-- Flow arrow computer → terminal -->
+        <g stroke="#0A0A0A" stroke-width="1" stroke-dasharray="4,3" class="svg-flow"><line x1="100" y1="192" x2="185" y2="192"/></g>
+        <polygon points="182,188 192,192 182,196" fill="#999"/>
+
+        <!-- Terminal (field handheld, center) -->
+        <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+          <rect x="196" y="155" width="90" height="65" rx="5"/>
+          <rect x="204" y="163" width="55" height="45" rx="3" stroke="#999" stroke-width="1"/>
+          <!-- Screen text -->
+          <line x1="210" y1="175" x2="250" y2="175" stroke="#C5C3BE" stroke-width="1"/>
+          <line x1="210" y1="183" x2="245" y2="183" stroke="#C5C3BE" stroke-width="1"/>
+          <line x1="210" y1="191" x2="252" y2="191" stroke="#C5C3BE" stroke-width="1"/>
+          <!-- Side buttons -->
+          <rect x="264" y="170" width="16" height="10" rx="2" stroke="#C5C3BE" stroke-width="1"/>
+          <rect x="264" y="186" width="16" height="10" rx="2" stroke="#C5C3BE" stroke-width="1"/>
+        </g>
+        <text x="241" y="240" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.08em">TERMINAL</text>
+        <text x="241" y="250" text-anchor="middle" font-family="monospace" font-size="6" fill="#C5C3BE">FIELD / IP67</text>
+
+        <!-- Flow arrow terminal → sovereign box -->
+        <g stroke="#0A0A0A" stroke-width="1" stroke-dasharray="4,3" class="svg-flow"><line x1="286" y1="192" x2="355" y2="192"/></g>
+        <polygon points="352,188 362,192 352,196" fill="#999"/>
+
+        <!-- Sovereign Box (right) -->
+        <g fill="none" stroke="#0A0A0A" stroke-width="1.5">
+          <rect x="366" y="152" width="130" height="75" rx="3"/>
+          <!-- Rack ears -->
+          <rect x="358" y="152" width="8" height="75" rx="1" stroke="#999" stroke-width="1"/>
+          <rect x="496" y="152" width="8" height="75" rx="1" stroke="#999" stroke-width="1"/>
+          <!-- GPU bays -->
+          <rect x="376" y="160" width="24" height="42" rx="2" fill="#E8E6E0" stroke="#C5C3BE" stroke-width="1"/>
+          <rect x="404" y="160" width="24" height="42" rx="2" fill="#E8E6E0" stroke="#C5C3BE" stroke-width="1"/>
+          <rect x="432" y="160" width="24" height="42" rx="2" fill="#E8E6E0" stroke="#C5C3BE" stroke-width="1"/>
+          <rect x="460" y="160" width="24" height="42" rx="2" fill="#E8E6E0" stroke="#C5C3BE" stroke-width="1"/>
+          <!-- Vent lines -->
+          <line x1="376" y1="212" x2="484" y2="212" stroke="#D5D3CE" stroke-width="0.5"/>
+          <line x1="376" y1="216" x2="484" y2="216" stroke="#D5D3CE" stroke-width="0.5"/>
+        </g>
+        <text x="431" y="248" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.08em">SOVEREIGN BOX</text>
+        <text x="431" y="258" text-anchor="middle" font-family="monospace" font-size="6" fill="#C5C3BE">DATACENTER / 128GB</text>
+
+        <!-- Robot (bottom left, secondary) -->
+        <g fill="none" stroke="#999" stroke-width="1">
+          <rect x="20" y="300" width="36" height="44" rx="4"/>
+          <circle cx="38" cy="314" r="5" stroke="#C5C3BE"/>
+          <rect x="24" y="326" width="28" height="6" rx="1" stroke="#C5C3BE"/>
+          <!-- Wheels -->
+          <circle cx="28" cy="348" r="4"/><circle cx="48" cy="348" r="4"/>
+        </g>
+        <text x="38" y="370" text-anchor="middle" font-family="monospace" font-size="6" fill="#C5C3BE">ROBOT</text>
+        <g stroke="#999" stroke-width="0.8" stroke-dasharray="3,3" class="svg-flow"><line x1="56" y1="320" x2="70" y2="250"/></g>
+
+        <!-- Camera (bottom center, secondary) -->
+        <g fill="none" stroke="#999" stroke-width="1">
+          <rect x="180" y="300" width="30" height="22" rx="3"/>
+          <circle cx="195" cy="311" r="6"/><circle cx="195" cy="311" r="2" fill="#C5C3BE"/>
+          <rect x="190" y="326" width="10" height="16" rx="1"/>
+        </g>
+        <text x="195" y="358" text-anchor="middle" font-family="monospace" font-size="6" fill="#C5C3BE">CAMERA</text>
+        <g stroke="#999" stroke-width="0.8" stroke-dasharray="3,3" class="svg-flow"><line x1="195" y1="296" x2="220" y2="224"/></g>
+
+        <!-- PLC (bottom right, secondary) -->
+        <g fill="none" stroke="#999" stroke-width="1">
+          <rect x="400" y="295" width="50" height="35" rx="2"/>
+          <line x1="410" y1="300" x2="410" y2="325" stroke="#C5C3BE" stroke-width="0.5"/>
+          <line x1="420" y1="300" x2="420" y2="325" stroke="#C5C3BE" stroke-width="0.5"/>
+          <line x1="430" y1="300" x2="430" y2="325" stroke="#C5C3BE" stroke-width="0.5"/>
+          <line x1="440" y1="300" x2="440" y2="325" stroke="#C5C3BE" stroke-width="0.5"/>
+          <circle cx="413" cy="307" r="1.5" fill="#999"/><circle cx="423" cy="307" r="1.5" fill="#C5C3BE"/>
+        </g>
+        <text x="425" y="348" text-anchor="middle" font-family="monospace" font-size="6" fill="#C5C3BE">INDUSTRIAL PLC</text>
+        <g stroke="#999" stroke-width="0.8" stroke-dasharray="3,3" class="svg-flow"><line x1="425" y1="293" x2="431" y2="232"/></g>
+
+        <!-- Flow label -->
+        <text x="260" y="142" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.12em">OBSERVE → REASON → EXECUTE</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="reg-divider">INDUSTRY SOLUTIONS</div>
+
+  <!-- SOLUTIONS CARDS -->
+  <section class="cards ghost-text" data-ghost="SOLUTIONS">
+    <div class="wrap">
+      <div class="cards__header">
+        <h2 class="t-heading">Maximizing human potential</h2>
+        <span class="t-mono">Solutions by industry</span>
+      </div>
+      <div class="cards__grid">
+        <div class="card"><div class="card__num">01 — Education</div><h3 class="card__title">Learn by building</h3><p class="card__desc">Interactive agent playground. Local inference, no cloud accounts. Privacy-first environments where students explore without limits.</p></div>
+        <div class="card"><div class="card__num">02 — Healthcare</div><h3 class="card__title">Patient-first intelligence</h3><p class="card__desc">Transcription, queue management, resource allocation. Data stays on-premise. Insights stay with the clinician.</p></div>
+        <div class="card"><div class="card__num">03 — Infrastructure</div><h3 class="card__title">Talk to your systems</h3><p class="card__desc">Configure switches, monitor clusters, diagnose issues. Agents pull in context. Engineers act with confidence.</p></div>
+        <div class="card"><div class="card__num">04 — Security &amp; Surveillance</div><h3 class="card__title">Mapping the unseen</h3><p class="card__desc">Agentic security scanning. Vision-language models on camera feeds. Auto-discover ONVIF devices. Scene understanding without cloud uploads.</p></div>
+        <div class="card"><div class="card__num">05 — Robotics</div><h3 class="card__title">Onboard intelligence</h3><p class="card__desc">Path planning, obstacle avoidance, sensor fusion. Reprogram behavior without reflashing firmware. Runs in the chassis, not in the cloud.</p></div>
+        <div class="card"><div class="card__num">06 — Drones &amp; Vehicles</div><h3 class="card__title">Intelligence at altitude</h3><p class="card__desc">Edge inference in flight. Mission planning, real-time object detection, autonomous navigation. Operates beyond signal range. Offline-capable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIVE INTELLIGENCE CALLOUT -->
+  <section class="callout">
+    <div class="wrap">
+      <h2 class="callout__text">Every node makes the network smarter.</h2>
+      <p class="callout__sub">When a drone observes, the terminal reasons, and the server executes — context flows between them without friction. Machine to machine. Machine to human. Collective intelligence that compounds with every deployment.</p>
+    </div>
+  </section>
+
+  <!-- COLLECTIVE INTELLIGENCE — Split with mesh diagram -->
+  <section class="split split--reverse">
+    <div class="split__content">
+      <div class="split__label">Collective Intelligence</div>
+      <h2 class="split__title">Frictionless collaboration across heterogeneous hardware.</h2>
+      <p class="split__desc">
+        A drone at altitude shares context with a handheld terminal on the ground.
+        A factory robot streams sensor data to an on-premise server. A field
+        engineer's terminal pulls inference from the nearest available node.
       </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur">
-        <div class="w-12 h-12 bg-lavender-500/20 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-lavender-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-display text-white mb-3">Hardware Products</h3>
-        <p class="text-white/60 leading-relaxed mb-6">
-          Enterprise-grade routers, switches, wireless access points, firewalls,
-          and servers for high-performance networking.
-        </p>
-        <a href="hardware-products.html" class="inline-flex items-center gap-2 text-lavender-300 font-medium text-sm uppercase tracking-wide">
-          View Hardware Catalog
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-      <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur">
-        <div class="w-12 h-12 bg-lavender-500/20 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-lavender-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-display text-white mb-3">AI-Centric Infrastructure</h3>
-        <p class="text-white/60 leading-relaxed mb-6">
-          Datacenter software and core services built for sovereign AI,
-          secure orchestration, and zero-trust operations.
-        </p>
-        <a href="ai-infrastructure.html" class="inline-flex items-center gap-2 text-lavender-300 font-medium text-sm uppercase tracking-wide">
-          View Infrastructure
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-      <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur">
-        <div class="w-12 h-12 bg-lavender-500/20 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-lavender-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-display text-white mb-3">Edge & AI Devices</h3>
-        <p class="text-white/60 leading-relaxed mb-6">
-          Specialized edge devices for capture, sensing, and secure on-site AI
-          that integrate with the Neurulus stack.
-        </p>
-        <a href="edge-devices.html" class="inline-flex items-center gap-2 text-lavender-300 font-medium text-sm uppercase tracking-wide">
-          View Edge Devices
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODERNIZATION & TCO SECTION -->
-<section class="py-24 px-6 bg-white">
-  <div class="max-w-7xl mx-auto">
-
-    <div class="text-center mb-16">
-      <span class="text-lavender-500 font-display text-lg tracking-widest uppercase mb-4 block">
-        Modernization & Value
-      </span>
-      <h2 class="font-display text-4xl md:text-5xl text-surface-dark mb-4">
-        Modernize Your AI Stack.
-      </h2>
-      <p class="text-surface-dark/70 text-lg max-w-3xl mx-auto leading-relaxed">
-        Legacy stacks slow AI delivery. Neurulus modernizes data, models, and workflows
-        so teams can deploy AI faster with lower operational overhead.
+      <p class="split__desc">
+        Same protocol. Same data format. Same trust model. No integration layer.
+        No middleware. No cloud broker. Devices discover each other, share
+        workloads, and compound intelligence — automatically.
       </p>
+      <dl class="inline-specs">
+        <dt>Topology</dt><dd>Peer mesh</dd>
+        <dt>Discovery</dt><dd>Automatic</dd>
+        <dt>Routing</dt><dd>Context-aware</dd>
+        <dt>Trust</dt><dd>Mutual attestation</dd>
+      </dl>
     </div>
+    <div class="split__visual">
+      <!-- Peer mesh collaboration diagram -->
+      <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+        <!-- Central mesh connections (all-to-all) -->
+        <g stroke="#C5C3BE" stroke-width="1" stroke-dasharray="5,4" class="svg-flow">
+          <line x1="130" y1="120" x2="370" y2="120"/>
+          <line x1="130" y1="120" x2="130" y2="300"/>
+          <line x1="130" y1="120" x2="370" y2="300"/>
+          <line x1="370" y1="120" x2="130" y2="300"/>
+          <line x1="370" y1="120" x2="370" y2="300"/>
+          <line x1="130" y1="300" x2="370" y2="300"/>
+          <!-- Cross connections -->
+          <line x1="250" y1="60" x2="130" y2="120"/>
+          <line x1="250" y1="60" x2="370" y2="120"/>
+          <line x1="250" y1="60" x2="250" y2="210"/>
+          <line x1="250" y1="210" x2="130" y2="300"/>
+          <line x1="250" y1="210" x2="370" y2="300"/>
+        </g>
 
-    <!-- 3 Pillars -->
-    <div class="grid md:grid-cols-3 gap-10">
+        <!-- Central hub -->
+        <circle cx="250" cy="210" r="24" fill="#E8E6E0" stroke="#0A0A0A" stroke-width="2"/>
+        <circle cx="250" cy="210" r="8" fill="#0A0A0A"/>
+        <text x="250" y="250" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.08em">MESH PROTOCOL</text>
 
-      <div class="p-10 bg-surface-darker text-white rounded-3xl shadow-lg">
-        <div class="text-5xl font-display text-lavender-300 mb-4">4<span class="text-lavender-300">x</span></div>
-        <h3 class="text-xl font-semibold mb-3">Delivery Acceleration</h3>
-        <p class="text-white/70 leading-relaxed">
-          Cut model build and deployment cycles with automated pipelines,
-          reusable components, and integrated governance.
-        </p>
-      </div>
+        <!-- Drone (top) -->
+        <g>
+          <circle cx="250" cy="60" r="18" fill="#E8E6E0" stroke="#0A0A0A" stroke-width="1.5"/>
+          <line x1="234" y1="60" x2="266" y2="60" stroke="#0A0A0A" stroke-width="1"/>
+          <line x1="250" y1="50" x2="250" y2="70" stroke="#999" stroke-width="0.8"/>
+          <circle cx="250" cy="60" r="4" fill="#0A0A0A"/>
+          <text x="250" y="36" text-anchor="middle" font-family="monospace" font-size="7" fill="#999" letter-spacing="0.08em">DRONE</text>
+        </g>
 
-      <div class="p-10 bg-surface-darker text-white rounded-3xl shadow-lg">
-        <div class="text-5xl font-display text-lavender-300 mb-4">60%</div>
-        <h3 class="text-xl font-semibold mb-3">Lower Ops Cost</h3>
-        <p class="text-white/70 leading-relaxed">
-          Reduce operational overhead with intelligent monitoring,
-          policy enforcement, and automated remediation.
-        </p>
-      </div>
+        <!-- Terminal (top-left) -->
+        <g>
+          <rect x="105" y="100" width="50" height="36" rx="5" fill="#E8E6E0" stroke="#0A0A0A" stroke-width="1.5"/>
+          <rect x="111" y="106" width="30" height="20" rx="2" fill="none" stroke="#C5C3BE" stroke-width="1"/>
+          <text x="130" y="155" text-anchor="middle" font-family="monospace" font-size="7" fill="#999">TERMINAL</text>
+        </g>
 
-      <div class="p-10 bg-surface-darker text-white rounded-3xl shadow-lg">
-        <div class="text-5xl font-display text-lavender-300 mb-4">100%</div>
-        <h3 class="text-xl font-semibold mb-3">Compliance Ready</h3>
-        <p class="text-white/70 leading-relaxed">
-          Built-in audit trails, access controls, and model governance
-          aligned to enterprise security policies.
-        </p>
-      </div>
+        <!-- Server (top-right) -->
+        <g>
+          <rect x="345" y="100" width="50" height="36" rx="3" fill="#E8E6E0" stroke="#0A0A0A" stroke-width="1.5"/>
+          <rect x="351" y="106" width="10" height="22" rx="1" fill="none" stroke="#C5C3BE" stroke-width="0.8"/>
+          <rect x="365" y="106" width="10" height="22" rx="1" fill="none" stroke="#C5C3BE" stroke-width="0.8"/>
+          <rect x="379" y="106" width="10" height="22" rx="1" fill="none" stroke="#C5C3BE" stroke-width="0.8"/>
+          <text x="370" y="155" text-anchor="middle" font-family="monospace" font-size="7" fill="#999">SERVER</text>
+        </g>
 
+        <!-- Robot (bottom-left) -->
+        <g>
+          <rect x="110" y="278" width="40" height="40" rx="4" fill="#E8E6E0" stroke="#0A0A0A" stroke-width="1.5"/>
+          <circle cx="130" cy="292" r="5" fill="none" stroke="#C5C3BE" stroke-width="1"/>
+          <circle cx="118" cy="322" r="4" fill="none" stroke="#999" stroke-width="1"/>
+          <circle cx="142" cy="322" r="4" fill="none" stroke="#999" stroke-width="1"/>
+          <text x="130" y="342" text-anchor="middle" font-family="monospace" font-size="7" fill="#999">ROBOT</text>
+        </g>
+
+        <!-- Edge computer (bottom-right) -->
+        <g>
+          <rect x="350" y="280" width="40" height="36" rx="6" fill="#E8E6E0" stroke="#0A0A0A" stroke-width="1.5"/>
+          <circle cx="370" cy="292" r="5" fill="none" stroke="#C5C3BE" stroke-width="1"/>
+          <line x1="358" y1="304" x2="382" y2="304" stroke="#C5C3BE" stroke-width="0.8"/>
+          <text x="370" y="332" text-anchor="middle" font-family="monospace" font-size="7" fill="#999">COMPUTER</text>
+        </g>
+
+        <!-- Context flow arrows (bidirectional indicators) -->
+        <g fill="#999">
+          <polygon points="188,116 192,112 192,120"/>
+          <polygon points="312,116 308,112 308,120"/>
+          <polygon points="126,150 122,146 130,146"/>
+          <polygon points="374,150 370,146 378,146"/>
+          <polygon points="246,90 242,86 250,86"/>
+        </g>
+
+        <!-- Label -->
+        <text x="250" y="385" text-anchor="middle" font-family="monospace" font-size="8" fill="#777" letter-spacing="0.1em">CONTEXT FLOWS. INTELLIGENCE COMPOUNDS.</text>
+      </svg>
     </div>
+  </section>
+
+  <!-- HUMANE TECHNOLOGY -->
+  <section class="callout" style="padding:100px 0;">
+    <div class="wrap">
+      <h2 class="callout__text">Technology shaped by human needs,<br>not the reverse.</h2>
+      <p class="callout__sub">Aligned with how people actually think, move, and decide. Surfaces the right information at the right moment. Protects attention. Amplifies judgment. Gives people the space to be creative.</p>
+    </div>
+  </section>
+
+  <!-- DATA CALLOUT -->
+  <section class="callout">
+    <div class="wrap">
+      <span class="version-stamp">NRL / PLATFORM THESIS / 2026</span>
+      <h2 class="callout__text">Data is the raw material. Intelligence is the refinement.</h2>
+      <p class="callout__sub">Scattered data and complex processes transform into actionable insights. Sharper execution. Measurable long-term value.</p>
+    </div>
+  </section>
+
+  <div class="reg-divider">ARCHITECTURE</div>
+  <!-- ARCHITECTURE SPLIT -->
+  <section class="split">
+    <div class="split__content">
+      <div class="split__label">Architecture</div>
+      <h2 class="split__title">Made for continuous operation.</h2>
+      <p class="split__desc">RAM-resident OS with immutable base. Self-hosted toolchain with zero external binary trust. Deterministic 3-second boot. Fault-tolerant agent supervision.</p>
+      <p class="split__desc">Minimal package set. Every component purpose-built — fewer packages, fewer CVEs, fewer attack vectors, same functionality. The attack surface is small by design, not by policy.</p>
+      <p class="split__desc">No cloud dependency. Operates air-gapped or networked. Tamper-evident by architecture.</p>
+    </div>
+    <div class="split__visual split__visual--dark">
+      <div class="terminal" style="width:100%;max-width:400px;">
+        <div class="terminal__bar"><span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span></div>
+<div class="terminal__body">
+<span class="d">┌────────────────────────────────────┐</span>
+<span class="d">│</span> <span class="w">NEURULUS PLATFORM</span>      v1.0.0      <span class="d">│</span>
+<span class="d">│</span> Status: <span class="g">OPERATIONAL</span>                 <span class="d">│</span>
+<span class="d">├────────────────────────────────────┤</span>
+<span class="d">│</span>  INFERENCE  405B-Q4  <span class="w">18 tok/s</span>      <span class="d">│</span>
+<span class="d">│</span>  KV CACHE   5.95x    3-bit         <span class="d">│</span>
+<span class="d">│</span>  AGENTS     12       <span class="g">■</span> supervised   <span class="d">│</span>
+<span class="d">│</span>  EGRESS     <span class="w">NONE</span>     sovereign      <span class="d">│</span>
+<span class="d">│</span>  BOOT       <span class="w">3.1s</span>     from RAM       <span class="d">│</span>
+<span class="d">│</span>  TRUST      <span class="g">VERIFIED</span>  zero ext.    <span class="d">│</span>
+<span class="d">└────────────────────────────────────┘</span>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <div class="certs">
+    <span class="cert">ISO 26262 (ASIL D)</span><span class="cert">DO-178C</span><span class="cert">IEC 62304</span><span class="cert">IEC 61508 (SIL 4)</span><span class="cert">EN 50128</span><span class="cert">IEC 62443</span><span class="cert">STIG</span><span class="cert">FIPS</span>
   </div>
-</section>
 
-
-
-<!-- INDUSTRIES SECTION -->
-<section class="py-24 px-6 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="text-lavender-500 font-display text-lg tracking-widest uppercase mb-4 block">
-        Industries
-      </span>
-      <h2 class="font-display text-4xl md:text-5xl text-surface-dark mb-4">
-        GenAI Solutions Across Sectors
-      </h2>
-      <p class="text-surface-dark/70 text-lg max-w-3xl mx-auto">
-        Neurulus platforms adapt to regulated, data-intensive industries with
-        secure, domain-specific AI workflows.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Smart Cities</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Real-time surveillance intelligence, traffic analytics, and public safety automation.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Manufacturing</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Predictive maintenance, quality inspection, and autonomous process optimization.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Healthcare</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Clinical copilots, imaging workflows, and secure data summarization.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Automotive</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Driver assistance analytics, fleet intelligence, and telematics automation.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Energy & Utilities</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Grid optimization, anomaly detection, and asset lifecycle forecasting.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Finance</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Risk scoring, compliance monitoring, and low-latency decisioning.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Retail</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Demand forecasting, personalization, and intelligent customer support.
-        </p>
-      </div>
-      <div class="bg-lavender-50 rounded-2xl p-6">
-        <h3 class="text-lg font-display text-surface-dark mb-2">Agriculture</h3>
-        <p class="text-surface-dark/60 text-sm leading-relaxed">
-          Crop monitoring, yield prediction, and smart irrigation optimization.
-        </p>
+  <!-- CTA -->
+  <section class="callout callout--dark corner-marks">
+    <div class="wrap">
+      <h2 class="callout__text">Built for the new industrial era of intelligence.</h2>
+      <p class="callout__sub">Edge scale. Enterprise ready. One platform, every certification, every form factor.</p>
+      <div class="cta-section__actions" style="margin-top:40px;">
+        <a href="product.html" class="btn btn--white">Explore product</a>
+        <a href="solutions.html" class="btn btn--white">View solutions</a>
+        <a href="mailto:sales@neurulus.com" class="btn btn--white">Contact us</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CASE STUDIES SECTION -->
-<section class="py-24 px-6 bg-surface-dark text-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="text-lavender-300 font-display text-lg tracking-widest uppercase mb-4 block">
-        Case Studies
-      </span>
-      <h2 class="font-display text-4xl md:text-5xl mb-4">
-        Real-World GenAI Outcomes
-      </h2>
-      <p class="text-white/70 text-lg max-w-3xl mx-auto">
-        How Neurulus platforms enable secure, high-impact AI delivery in production.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur">
-        <h3 class="text-xl font-display text-white mb-3">Enterprise Knowledge Copilot</h3>
-        <p class="text-white/60 leading-relaxed mb-4">
-          Unified RAG pipelines across multiple business units with strict access controls.
-        </p>
-        <p class="text-lavender-300 text-sm">Impact: 4× faster retrieval, 60% ops reduction</p>
-      </div>
-      <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur">
-        <h3 class="text-xl font-display text-white mb-3">Smart Surveillance Intelligence</h3>
-        <p class="text-white/60 leading-relaxed mb-4">
-          Edge video analytics with real-time alerts, semantic tagging, and audit-ready logs.
-        </p>
-        <p class="text-lavender-300 text-sm">Impact: 30% fewer incidents, faster response</p>
-      </div>
-      <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur">
-        <h3 class="text-xl font-display text-white mb-3">Industrial Predictive Maintenance</h3>
-        <p class="text-white/60 leading-relaxed mb-4">
-          Sensor fusion and anomaly detection to predict failures before downtime.
-        </p>
-        <p class="text-lavender-300 text-sm">Impact: 25% downtime reduction</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- PARTNERS SECTION -->
-<section class="py-24 px-6">
-  <div class="max-w-7xl mx-auto text-center">
-    <span class="text-lavender-500 font-display text-lg tracking-widest uppercase mb-4 block">Trusted By</span>
-    <h2 class="font-display text-3xl md:text-4xl text-surface-dark mb-12">Technology Partners</h2>
-    <p class="text-surface-dark/60 mb-16 max-w-2xl mx-auto">
-      Our ecosystem combines software innovation with industry partnerships  
-      to enable secure, scalable GenAI solutions.
-    </p>
-    
-    <div class="flex flex-wrap justify-center items-center gap-12 opacity-60">
-      <div class="text-2xl font-bold text-surface-dark">INTEL</div>
-      <div class="text-2xl font-bold text-surface-dark">AMD</div>
-      <div class="text-2xl font-bold text-surface-dark">NVIDIA</div>
-      <div class="text-2xl font-bold text-surface-dark">BROADCOM</div>
-      <div class="text-2xl font-bold text-surface-dark">MELLANOX</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA SECTION -->
-<section class="py-24 px-6">
-  <div class="max-w-4xl mx-auto bg-surface-dark rounded-[2.5rem] p-16 text-center text-white shadow-xl relative overflow-hidden card-glow">
-    <div class="absolute inset-0 gradient-glow opacity-40"></div>
-    <div class="relative">
-      <span class="text-lavender-400 text-2xl font-display mb-6 block">}</span>
-      <h2 class="font-display text-4xl md:text-5xl mb-6">Launch Your GenAI Platform.</h2>
-      <p class="text-white/70 text-lg max-w-2xl mx-auto mb-10">
-        Build sovereign, secure AI applications with Neurulus software platforms
-        across on-prem, cloud, and edge environments.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-surface-dark px-8 py-4 rounded-full text-sm font-medium tracking-wide uppercase hover:bg-lavender-100 transition-colors">
-          Contact Sales
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-16 px-6 bg-surface-dark text-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-      <!-- Brand -->
-      <div class="lg:col-span-2">
-        <a href="index.html" class="flex items-center gap-2 mb-4">
-          <span class="text-lavender-500 text-2xl font-display">}</span>
-          <span class="text-white font-display font-semibold text-xl tracking-tight">Neurulus</span>
-        </a>
-        <p class="text-white/60 text-sm max-w-sm mb-6">
-          GenAI software platforms and AIoT solutions engineered for the enterprise AI era.
-        </p>
-        <div class="flex gap-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-white/10 hover:text-lavender-300 transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-          </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-white/10 hover:text-lavender-300 transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Products -->
-      <div>
-        <h4 class="font-display font-semibold mb-4">Platforms</h4>
-        <ul class="space-y-3">
-          <li><a href="neural-3000.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Neural Studio</a></li>
-          <li><a href="kinetic-pro.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Kinetic Labs</a></li>
-          <li><a href="quantum.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Quantum Fabric</a></li>
-          <li><a href="core.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Core Platform</a></li>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__tagline">From drones to datacenters — one platform, sovereign by design.</div>
+      <div class="footer__main">
+        <div class="footer__left">Neurulus Labs Pvt Ltd &copy; 2026</div>
+        <ul class="footer__links">
+          <li><a href="product.html">Product</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="company.html">Company</a></li>
+          <li><a href="#">GitHub</a></li>
         </ul>
       </div>
-
-      <!-- Company -->
-      <div>
-        <h4 class="font-display font-semibold mb-4">Company</h4>
-        <ul class="space-y-3">
-          <li><a href="about.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">About Us</a></li>
-          <li><a href="about.html#careers" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Careers</a></li>
-          <li><a href="about.html#press" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Press</a></li>
-          <li><a href="contact.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Support -->
-      <div>
-        <h4 class="font-display font-semibold mb-4">Support</h4>
-        <ul class="space-y-3">
-          <li><a href="documentation.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Case Studies</a></li>
-          <li><a href="support.html" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Support</a></li>
-          <li><a href="support.html#warranty" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">Warranty</a></li>
-          <li><a href="support.html#rma" class="text-white/60 text-sm hover:text-lavender-300 transition-colors">RMA</a></li>
-        </ul>
+      <div class="footer__bottom">
+        <span>Sovereign Intelligence Platform</span>
+        <span>2026</span>
       </div>
     </div>
-
-    <!-- Bottom Bar -->
-    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-white/40 text-sm">&copy; 2025 Neurulus Labs Private Limited. All rights reserved.</p>
-      <div class="flex gap-6">
-        <a href="#" class="text-white/40 text-sm hover:text-lavender-300 transition-colors">Privacy Policy</a>
-        <a href="#" class="text-white/40 text-sm hover:text-lavender-300 transition-colors">Terms of Service</a>
-        <a href="#" class="text-white/40 text-sm hover:text-lavender-300 transition-colors">Cookie Settings</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-  <script src="navbar.js"></script>
+  </footer>
 </body>
 </html>
