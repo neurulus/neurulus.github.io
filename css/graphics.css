@@ -1,0 +1,227 @@
+/* ============================================================
+   GRAPHICS — Pixel art, dot-matrix, technical diagrams
+   Inspired by: Geist Pixel, theme20 (Nucleus), theme38 (Agentik),
+   theme40 (ISC), theme24 (PRG-01), theme15 (Aeris VECTOR)
+   ============================================================ */
+
+/* --- Dot grid overlay for sections --- */
+.dot-bg {
+  position: relative;
+}
+.dot-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.dot-bg > * { position: relative; z-index: 1; }
+
+/* --- Pixel logo mark --- */
+.pixel-mark {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+/* --- Hero graphic container --- */
+.hero-graphic {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero-graphic { display: none; }
+}
+
+/* --- Scanline overlay --- */
+.scanlines {
+  position: relative;
+}
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,0.015) 3px,
+    rgba(0,0,0,0.015) 4px
+  );
+  pointer-events: none;
+}
+
+/* --- Technical frame around sections --- */
+.tech-frame {
+  position: relative;
+  padding: 48px;
+  border: 1px solid var(--border);
+}
+.tech-frame::before {
+  content: '+';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+.tech-frame::after {
+  content: '+';
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+/* --- Pixel art node diagram --- */
+.pixel-grid {
+  display: grid;
+  gap: 3px;
+}
+.pixel-grid .px {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.pixel-grid .px--on { background: var(--text); }
+.pixel-grid .px--accent { background: var(--accent); }
+.pixel-grid .px--muted { background: var(--border); }
+.pixel-grid .px--off { background: transparent; }
+
+/* --- Isometric platform diagram --- */
+.iso-diagram {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Product blueprint frame --- */
+.blueprint {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.blueprint::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.3;
+}
+.blueprint > * { position: relative; }
+
+/* --- Status indicator --- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 8px;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* --- Dashed connection lines --- */
+.connector {
+  border-left: 2px dashed var(--border);
+  height: 32px;
+  margin-left: 24px;
+}
+
+/* --- Spec badge --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.badge--accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --- Large pixel number display --- */
+.pixel-number {
+  font-family: var(--font-pixel);
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 0.9;
+  color: var(--text);
+  opacity: 0.06;
+  user-select: none;
+}
+
+/* --- Corner registration marks on cards --- */
+.reg-corners {
+  position: relative;
+}
+.reg-corners::before,
+.reg-corners::after {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  opacity: 0.3;
+  position: absolute;
+}
+.reg-corners::before {
+  content: '+';
+  top: 8px;
+  left: 8px;
+}
+.reg-corners::after {
+  content: '+';
+  bottom: 8px;
+  right: 8px;
+}
+
+/* --- Inline SVG icon system --- */
+.icon-svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+  vertical-align: middle;
+}
+
+/* --- Hero pixel art - large background glyph --- */
+.hero-glyph {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  width: 400px;
+  height: 400px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .hero-glyph { display: none; }
+}

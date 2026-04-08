@@ -1,0 +1,169 @@
+/* ============================================================
+   ASCII ART SYSTEM — Razor 1911 / ACiD / iCE era
+   Monospace pre blocks, ANSI-inspired layouts
+   ============================================================ */
+
+/* --- ASCII art blocks --- */
+.ascii {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.35;
+  white-space: pre;
+  overflow-x: auto;
+  color: var(--text);
+  user-select: none;
+  letter-spacing: 0;
+}
+
+.ascii--large {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.ascii--xl {
+  font-size: clamp(8px, 1.2vw, 16px);
+  line-height: 1.2;
+}
+
+.ascii--hero {
+  font-size: clamp(6px, 1vw, 12px);
+  line-height: 1.15;
+  color: var(--text);
+  opacity: 0.08;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  pointer-events: none;
+  max-width: 55%;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .ascii--hero { display: none; }
+}
+
+.ascii--accent { color: var(--accent); }
+.ascii--muted { color: var(--text-muted); opacity: 0.6; }
+.ascii--dim { opacity: 0.15; }
+
+/* --- ASCII section divider --- */
+.ascii-divider {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--border);
+  text-align: center;
+  padding: 24px 0;
+  user-select: none;
+  overflow: hidden;
+  letter-spacing: 0;
+  white-space: pre;
+}
+
+/* --- Terminal-style box --- */
+.terminal-box {
+  background: var(--dark);
+  color: #AAAAAA;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 24px;
+  border: 1px solid #333;
+  position: relative;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.terminal-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: #222;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-box__title {
+  position: relative;
+  z-index: 1;
+  color: #666;
+  font-size: 11px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.terminal-box .t-accent { color: #FF4400; }
+.terminal-box .t-green { color: #5A9E4B; }
+.terminal-box .t-dim { color: #555; }
+.terminal-box .t-white { color: #F5F3EE; }
+.terminal-box .t-muted { color: #666; }
+
+/* --- ANSI-style bordered box --- */
+.ansi-box {
+  border: 1px solid var(--border);
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.ansi-box__header {
+  background: var(--surface);
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+.ansi-box__body {
+  padding: 16px;
+}
+
+/* --- Product ASCII art visual --- */
+.product-card__visual--ascii {
+  height: auto !important;
+  min-height: 180px;
+  background: var(--dark) !important;
+  border: 1px solid #333 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px !important;
+}
+
+.product-card__visual--ascii .ascii {
+  color: #666;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.product-card__visual--ascii .ascii .hi {
+  color: var(--accent);
+}
+
+/* --- Horizontal rule ASCII --- */
+.hr-ascii {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--border);
+  text-align: center;
+  user-select: none;
+  white-space: pre;
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+/* --- Cert card with ASCII icon --- */
+.cert-ascii {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--accent);
+  white-space: pre;
+  margin-bottom: 12px;
+}
