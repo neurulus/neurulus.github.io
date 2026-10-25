@@ -47,7 +47,7 @@ function buildRoutes(){
     return {route:makeRoute([{x:-40,y:startY},{x:inlet,y:startY},{x:inlet,y:input.y},input,middle,gate,{x:turn,y:gate.y},{x:turn,y:level},{x:outputX,y:level}]),gate,index:i};
   });
 }
-const rootStyle=getComputedStyle(document.documentElement),signalColor=rootStyle.getPropertyValue('--signal').trim()||'#dcebb7',dotColor=rootStyle.getPropertyValue('--tone-fff').trim()||'#fff',surfaceColor=rootStyle.getPropertyValue('--tone-e8e8e8').trim()||'#e8e8e8';
+const rootStyle=getComputedStyle(document.documentElement),signalColor=rootStyle.getPropertyValue('--signal').trim()||'#ffd700',dotColor=rootStyle.getPropertyValue('--tone-fff').trim()||'#fff',surfaceColor=rootStyle.getPropertyValue('--tone-e8e8e8').trim()||'#e8e8e8';
 function dot(x,y,r,color,opacity=1){if(x<-3||x>width+3||y<0||y>height+3)return;ctx.globalAlpha=opacity;ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();}
 function draw(time){
   ctx.clearRect(0,0,width,height);

@@ -1,10 +1,11 @@
-/* Shared colour tokens: the selected default is cobalt/soft pistachio. */
-:root{--tone-000:#000;--tone-fff:#fff;--tone-fafafa:#fafafa;--tone-eee:#eee;--tone-777:#777;--tone-005b58:#0016be;--tone-b8ffd8:#dcebb7;--tone-999:#999;--tone-ddd:#ddd;--tone-111:#111;--tone-666:#666;--tone-bbb:#bbb;--tone-aaa:#aaa;--tone-444:#444;--tone-555:#555;--tone-333:#333;--tone-222:#222;--tone-ccc:#ccc;--tone-d9d9d9:#d9d9d9;--tone-b9c1ff:#b9c1ff;--tone-e8e8e8:#e8e8e8;--tone-0003:#0003;--tone-0005:#0005;--signal:#dcebb7;--chart-accent:#0016be}
+/* Shared colour tokens: the selected default is cobalt/gold. */
+:root{--tone-000:#000;--tone-fff:#fff;--tone-fafafa:#fafafa;--tone-eee:#eee;--tone-777:#777;--tone-005b58:#0016be;--tone-b8ffd8:#ffd700;--tone-999:#999;--tone-ddd:#ddd;--tone-111:#111;--tone-666:#666;--tone-bbb:#bbb;--tone-aaa:#aaa;--tone-444:#444;--tone-555:#555;--tone-333:#333;--tone-222:#222;--tone-ccc:#ccc;--tone-d9d9d9:#d9d9d9;--tone-b9c1ff:#b9c1ff;--tone-e8e8e8:#e8e8e8;--tone-0003:#0003;--tone-0005:#0005;--signal:#ffd700;--chart-accent:#0016be}
 :root[data-palette="original"]{--tone-005b58:#0016be;--tone-b8ffd8:#fbf738;--tone-b9c1ff:#b9c1ff;--signal:#fbf738;--chart-accent:#0016be}
 :root[data-palette="petrol"]{--tone-005b58:#005b58;--tone-b8ffd8:#b8ffd8;--tone-b9c1ff:#b8e3d9;--signal:#b8ffd8;--chart-accent:#007c70}
 :root[data-palette="theorem"]{--tone-000:#14161a;--tone-fff:#fbfbfa;--tone-fafafa:#fbfbfa;--tone-eee:#edf0f4;--tone-005b58:#1f5fbf;--tone-b8ffd8:#e3ecfa;--tone-b9c1ff:#d9e6fb;--tone-111:#14161a;--tone-666:#5b6068;--tone-777:#646a73;--tone-999:#b3b8c0;--tone-ddd:#e4e7ec;--tone-bbb:#b9c1cc;--tone-aaa:#a6afbd;--tone-444:#474d57;--tone-555:#555d69;--tone-333:#303741;--tone-222:#252b34;--tone-ccc:#d3d9e1;--tone-d9d9d9:#dfe5ee;--tone-e8e8e8:#e9edf4;--signal:#dc3a00;--chart-accent:#1f5fbf}
 :root[data-palette="apricot"]{--tone-005b58:#0016be;--tone-b8ffd8:#ffd0b0;--tone-b9c1ff:#b9c1ff;--signal:#ffd0b0;--chart-accent:#0016be}
 :root[data-palette="pistachio"]{--tone-005b58:#0016be;--tone-b8ffd8:#dcebb7;--tone-b9c1ff:#b9c1ff;--signal:#dcebb7;--chart-accent:#0016be}
+:root[data-palette="gold"]{--tone-005b58:#0016be;--tone-b8ffd8:#ffd700;--tone-b9c1ff:#b9c1ff;--signal:#ffd700;--chart-accent:#0016be}
 
 .outcome-tabs button{color:var(--tone-b9c1ff)}
 :root[data-palette=theorem] .announcement,:root[data-palette=theorem] .deployment{background:var(--tone-b8ffd8)}
