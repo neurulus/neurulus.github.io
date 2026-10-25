@@ -6,7 +6,7 @@ function selectTab(button,attribute,panel){
   $(panel)?.setAttribute('aria-labelledby',button.id);
 }
 const outcomes={
-  assurance:{title:'Protect the work<br>you depend on.',description:'Reduce exposure with a smaller system and deliberate access to data and resources. Keep security and system change within one operating lifecycle.',aside:'Cybersecurity belongs in the foundation of the system your business runs.',alt:'A dotted security boundary with a controlled path into and out of the operation.'},
+  assurance:{title:'Protect the work<br>you depend on.',description:'Reduce the attack surface. Limit each workload’s access. Build essential operations on verifiable Linux systems.',aside:'Less exposure. Clear access boundaries. Integrity your team can check.',alt:'A dotted security boundary with a controlled path into and out of the operation.'},
   compute:{title:'Run the work<br>you need.',description:'Bring compute to the task, from local services and task-specific models to demanding inference and coordinated applications. Select resources for the response the workload requires.',aside:'Get useful computation where it is needed, within your time, power and deployment constraints.',alt:'Dotted compute modules above a shared operating foundation.'},
   control:{title:'Keep your data<br>under your control.',description:'Choose where information is processed and which workloads may use it. Retain control over the data and resources your operation depends on.',aside:'Make business information useful while keeping its operating boundaries in your hands.',alt:'Nested dotted surfaces inside an explicit operating boundary.'}
 };
@@ -18,9 +18,9 @@ $$('[data-outcome]').forEach(b=>b.addEventListener('click',()=>{
 
 const steps=[
   {label:'The required system',title:'Compose around the task.',description:'Bring together the packages, services and compute the workload needs. Keep its dependencies and access explicit.',link:'system.html#composition',linkText:'Explore system composition'},
-  {label:'Confidence in the deployment',title:'Establish the evidence.',description:'Understand the evidence behind the system and the security requirements of the deployment. Make decisions with the relevant assurance in view.',link:'assurance.html',linkText:'Explore assurance'},
+  {label:'Verifiable evidence',title:'Establish the evidence.',description:'Review the specified behaviour, integrity evidence and assumptions covered by the deployment. Give your team a checkable basis for the decision.',link:'assurance.html',linkText:'Explore assurance'},
   {label:'The operating environment',title:'Deploy the right system.',description:'Start with integrated compute and Silicon OS, or assess suitable existing hardware. Match the system to its workload and interfaces.',link:'platform.html#starting-points',linkText:'Explore deployment options'},
-  {label:'The next controlled change',title:'Keep the lifecycle together.',description:'Keep services, software dependencies and updates manageable as the operation and its workload evolve.',link:'system.html#lifecycle',linkText:'Explore the operating lifecycle'}
+  {label:'The next controlled change',title:'Control the next change.',description:'Keep updates, configuration and workload authority within one controlled lifecycle as the operation evolves.',link:'system.html#lifecycle',linkText:'Explore the operating lifecycle'}
 ];
 let step=0;
 function renderStep(){const d=steps[step];$('#step-label').textContent=d.label;$('#step-title').textContent=d.title;$('#step-description').textContent=d.description;$('#step-count').textContent=(step+1)+'/4';$('#step-link').href=d.link;$('#step-link').innerHTML=d.linkText+' <span aria-hidden="true">↗</span>';$('#lifecycle-image').src='assets/pointwork/lifecycle-'+step+'.svg';$('#lifecycle-image').alt='Four dotted system layers, with '+['compose','establish','deploy','maintain'][step]+' highlighted.';}
